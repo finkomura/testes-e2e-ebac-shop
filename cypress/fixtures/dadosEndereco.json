@@ -1,0 +1,42 @@
+[
+{
+    "nome":"Anna" ,
+    "sobrenome":"Silva" ,
+    "empresa": "EBAC",
+    "pais": "Brasil",
+    "endereco" :"rua sorte",
+    "numero": "101",
+    "cidade": "São Paulo",
+    "Estado": "São Paulo",
+    "cep": 10001455,
+    "telefone": 96668669,
+    "email": "emailanna@email.com"
+},
+{
+    "nome":"Erica" ,
+    "sobrenome":"Pastor" ,
+    "empresa": "EBAC",
+    "pais": "Brasil",
+    "endereco" :"av 25 de Maio",
+    "numero": "3",
+    "cidade": "Rio de Janeiro",
+    "Estado": "Rio de Janeiro",
+    "cep": 10001465,
+    "telefone": 98668669,
+    "email": "emailericapastor@email.com"
+},
+{
+    "nome":"Vic" ,
+    "sobrenome":"Matos" ,
+    "empresa": "EBAC",
+    "pais": "Brasil",
+    "endereco" :"rua dos olivais",
+    "numero": "550",
+    "cidade": "São Paulo",
+    "Estado": "São Paulo",
+    "cep": 10001458,
+    "telefone": 96618669,
+    "email": "emailolivais@email.com"
+}
+
+]
