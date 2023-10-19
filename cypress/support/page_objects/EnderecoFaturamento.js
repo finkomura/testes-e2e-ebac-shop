@@ -1,8 +1,6 @@
-class EnderecoPAge {
+class EnderecoFaturamento {
 
     editarEnderecoFaturamento(nome, sobrenome,empresa, pais, endereco, numero, cidade, estado, cep, telefone, email) {
-        cy.get('.woocommerce-MyAccount-navigation-link--edit-address > a'). click()
-        cy.get(':nth-child(1) > .title > .edit').click()
         cy.get('#billing_first_name').clear().type(nome)
         cy.get('#billing_last_name').clear().type(sobrenome)
         cy.get('#billing_company').clear().type (empresa)
@@ -15,9 +13,9 @@ class EnderecoPAge {
         cy.get('#billing_postcode').clear().type(cep)
         cy.get('#billing_phone').clear().type(telefone)
         cy.get('#billing_email').clear().type(email)
-        cy.get(':nth-child(2) > .button').click()
+  
     }
 
 }
 
-export default new EnderecoPAge()
+export default new EnderecoFaturamento()
