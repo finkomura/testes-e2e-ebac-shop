@@ -18,7 +18,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     });
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
-
+        //utilizando o comando personalizado e a lista criada no fixtures, conseguimos aceder aos 4 produtos
         cy.addProdutos(
             produtos[0].codigo,
             produtos[0].tamanho,
@@ -44,9 +44,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
             produtos[3].quantidade
         )
 
-
-
-
+            //caso nao utilizasse a personalizacao dos comandos, ficaria assim:
         //cy.get('.post-2858 > .product-block > .block-inner > .image > .product-image > .image-hover').click()
         //cy.get('.button-variable-item-XS').click()
         //cy.get('.button-variable-item-Black').click()
@@ -79,7 +77,8 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
 
         cy.get('.dropdown-toggle > .text-skin > .icon-basket').click()
         cy.get('#cart > .dropdown-menu > .widget_shopping_cart_content > .mini_cart_content > .mini_cart_inner > .mcart-border > .buttons > .checkout').click()
-        
+        // dessa forma acedemos ao checkout. Agora, preencheremos com as informacoes.
+        // para esse fim, foi criado o EnderecoFaturamento, que vai buscar itens da lista dadosEndereco criada nos fixtures
         EnderecoFaturamento.editarEnderecoFaturamento(
             dadosEndereco[1].nome,
             dadosEndereco[1].sobrenome,
@@ -93,8 +92,10 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
             dadosEndereco[1].telefone,
             dadosEndereco[1].email
         )
+        //por fim, confirmamos que aceitamos os termos e completamos a compra
         cy.get('#terms').click()
         cy.get('#place_order').click()
+        //verificamos se foi concluida com sucesso
         cy.get('.woocommerce-notice').should('contain', 'Obrigado')
 
     });
